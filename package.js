@@ -9,7 +9,8 @@ Package.onUse(function(api) {
   api.versionsFrom('1.0');
   api.use([
     'underscore',
-    'mongo']);
+    'mongo',
+    'lai:collection-extensions@0.1.0']);
   
   api.addFiles('collection-helpers.js');
 });

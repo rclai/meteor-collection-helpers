@@ -1,5 +1,5 @@
 var Document = {};
-Mongo.Collection.prototype.helpers = function(helpers) {
+Meteor.addCollectionPrototype('helpers', function(helpers) {
   var self = this;
 
   if (self._transform && ! self._hasCollectionHelpers)
@@ -15,4 +15,4 @@ Mongo.Collection.prototype.helpers = function(helpers) {
   _.each(helpers, function(helper, key) {
     Document[self._name].prototype[key] = helper;
   });
-};
+});
